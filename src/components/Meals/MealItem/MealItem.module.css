@@ -15,6 +15,13 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 768px) {
+  .mealItem {
+    width: 100%;
+    min-height: 200px;
+  }
+}
+
 .mealPriceContainer {
   width: 100%;
   display: flex;
@@ -39,6 +46,7 @@
   border-bottom-right-radius: 30px;
   border-top-left-radius: 30px;
   object-fit: cover;
+  object-position: center;
   width: 60%;
-  height: 60%;
+  height: 50%;
 }

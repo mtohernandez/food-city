@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  #root {
+    align-items: stretch;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

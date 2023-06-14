@@ -12,10 +12,11 @@ import {
 
 import classes from "./CartMeals.module.css";
 
-const { totalAmountStyle, buttonStyle } = classes;
+const { totalAmountStyle, noItemStyle } = classes;
 
 const CartMeals = () => {
-  const { items, totalAmount, addItem, removeItem, clearCart } = useContext(CartContext);
+  const { items, totalAmount, addItem, removeItem, clearCart } =
+    useContext(CartContext);
 
   const orderHandler = () => {
     clearCart();
@@ -46,11 +47,12 @@ const CartMeals = () => {
     <CardRounded>
       <CardContainer>
         <MealSummary title="Current Cart" icon={shoppingCart} />
+        {mealsList.length === 0 && <p className={noItemStyle}>No items yet.</p>}
         <CardContainerInside>{mealsList}</CardContainerInside>
         <div className={totalAmountStyle}>
           <span>Total Amount (plus tax):</span>
           <span>${totalAmount.toFixed(2)}</span>
-          <ButtonGeneral label="Order" button={{ className: buttonStyle, onClick: orderHandler }} />
+          <ButtonGeneral label="Order" button={{ onClick: orderHandler }} />
         </div>
       </CardContainer>
     </CardRounded>

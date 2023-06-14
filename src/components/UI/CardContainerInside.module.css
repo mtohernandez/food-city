@@ -11,3 +11,10 @@
 .cardContainerInside::-webkit-scrollbar {
   display: none;
 }
+
+@media screen and (max-width: 768px) {
+  .cardContainerInside {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}

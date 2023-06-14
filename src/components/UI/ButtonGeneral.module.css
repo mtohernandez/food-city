@@ -5,4 +5,13 @@
   border-radius: 30px;
   padding: 10px;
   width: 100%;
+  max-width: 200px;
+
+  transition: all 0.3s ease;
+}
+
+.buttonStyle:hover{
+  cursor: pointer;
+  transform: translate(-3px, -3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }

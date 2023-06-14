@@ -8,6 +8,22 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
+
+  transition: all 0.3s ease;
+}
+
+/* for medium devices */
+
+@media screen and (max-width: 1024px) {
+  .cartItem{
+    flex: 1 1 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cartItem {
+    width: 100%;
+  }
 }
 
 .cartItemInside {

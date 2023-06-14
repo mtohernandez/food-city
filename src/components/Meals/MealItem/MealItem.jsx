@@ -26,7 +26,7 @@ const MealItem = (props) => {
     <li className={mealItem} onClick={() => addItemToCartHandler(1)} >
       <div>
         <div className={mealPriceContainer}>
-          <span className={mealPrice}>{meal.price}</span>
+          <span className={mealPrice}>${meal.price}</span>
           <img src={arrowUp} alt="arrow up" />
         </div>
         <h3 className={mealName}>{meal.name}</h3>
