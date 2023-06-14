@@ -2,23 +2,18 @@
   padding: 20px;
   border: 3px solid #171717;
   border-radius: 30px;
-  width: 250px;
   height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
 
+  flex: 1 1 250px;
+
   transition: all 0.3s ease;
 }
 
 /* for medium devices */
-
-@media screen and (max-width: 1024px) {
-  .cartItem{
-    flex: 1 1 250px;
-  }
-}
 
 @media screen and (max-width: 768px) {
   .cartItem {

@@ -3,8 +3,8 @@
   border: 3px solid #1c1c1c;
   border-radius: 30px;
   padding: 20px;
-  width: 300px;
   height: 300px;
+  flex: 1 1 250px;
 
   transition: all 0.3s ease;
 }
@@ -15,16 +15,10 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 1024px) {
-  .mealItem{
-    flex: 1 1 250px;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .mealItem {
     width: 100%;
-    min-height: 200px;
+    min-height: 300px;
   }
 }
 
