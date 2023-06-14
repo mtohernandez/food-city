@@ -1,0 +1,6 @@
+.rounded {
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: aquamarine;
+}
