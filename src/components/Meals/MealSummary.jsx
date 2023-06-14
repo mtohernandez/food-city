@@ -1,16 +1,20 @@
 import classes from "./MealSummary.module.css";
 
-const { titleStyle } = classes;
+const { titleStyle, titleContainer } = classes;
 
 const MealSummary = (props) => {
-
-  const { icon, title } = props;
+  const { icon, title, stats } = props;
 
   return (
-    <h2 className={titleStyle}>
-      <img src={icon} />
-      {title}
-    </h2>
+    <div className={titleContainer}>
+      <h2 className={titleStyle}>
+        <img src={icon} />
+        {title}
+      </h2>
+      {stats && Object.entries(stats).map(([key, value]) => (
+        <p key={key}>{key}: {value}</p>
+      ))}
+    </div>
   );
 };
 

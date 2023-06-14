@@ -1,3 +1,10 @@
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+
 .titleStyle {
   font-size: 1.5rem;
   font-weight: 700;
@@ -5,4 +12,19 @@
   align-items: center;
   gap: 10px;
   padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .titleStyle{
+    padding: 10px;
+  }
+
+  .titleContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .titleContainer p {
+    display: none;
+  }
 }
