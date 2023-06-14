@@ -1,65 +1,38 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 40px;
+  left: 30px;
+  right: 30px;
+  border-radius: 30px;
+  padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  background-color: #1a1a1a;
+  color: #171717;
+  border: 3px solid #171717;
+  background-color: white;
 }
 
 /* Title */
 
 .headerTitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: white;
 }
 
 /* Input */
 
 .headerInput {
-  padding: 0.5rem;
-  border-radius: 10px;
-  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 3px solid #F1F1F1;
+  color: #AFAFAF;
   width: 50%;
+
+  transition: all 0.3s ease;
 }
 
 .headerInput:focus {
+  border: 3px solid #D9D9D9;
   outline: none;
-}
-
-.burguerMenu {
-  display: none;
-}
-
-.burguerMenuItems {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  width: 70%;
-}
-
-
-@media screen and (max-width: 768px) {
-  .burguerMenu{
-    display: block;
-  }
-
-  .headerInput {
-    width: 90%;
-  }
-
-  .burguerMenuItems {
-    position: absolute;
-    flex-direction: column;
-    top: 0;
-    bottom: 0;
-    right: -100%;
-    width: 50%;
-  }
 }
   
