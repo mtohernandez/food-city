@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import CartContext from "../../../store/cart-context";
 import classes from "./MealItem.module.css";
-import MealItemForm from "./MealItemForm";
 
-const { mealItem, mealName, mealDescription, mealPrice } = classes;
+import arrowUp from "../../../assets/arrowUp.svg";
+
+const { mealItem, mealName, mealDescription, mealPrice, mealPriceContainer, mealImage } = classes;
 
 const MealItem = (props) => {
   const { addItem } = useContext(CartContext);
@@ -15,19 +16,23 @@ const MealItem = (props) => {
       id: meal.id,
       description: meal.description,
       name: meal.name,
-      amount: amount,
       price: meal.price,
+      tax: meal.tax,
+      amount: amount,
     });
   };
 
   return (
-    <li className={mealItem}>
+    <li className={mealItem} onClick={() => addItemToCartHandler(1)} >
       <div>
+        <div className={mealPriceContainer}>
+          <span className={mealPrice}>{meal.price}</span>
+          <img src={arrowUp} alt="arrow up" />
+        </div>
         <h3 className={mealName}>{meal.name}</h3>
         <p className={mealDescription}>{meal.description}</p>
-        <div className={mealPrice}>{meal.price}</div>
       </div>
-      <MealItemForm id={meal.id} onAddToCart={addItemToCartHandler} />
+      <img className={mealImage} src={meal.imageUrl} alt={meal.name} />
     </li>
   );
 };

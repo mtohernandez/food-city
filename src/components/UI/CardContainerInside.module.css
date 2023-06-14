@@ -1,0 +1,13 @@
+.cardContainerInside{
+  display: flex;
+  padding: 5px;
+  gap: 20px;
+  max-height: 20rem;
+  width: 100%;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.cardContainerInside::-webkit-scrollbar {
+  display: none;
+}

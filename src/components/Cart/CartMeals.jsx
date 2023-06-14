@@ -1,20 +1,25 @@
 import { useContext } from "react";
-import classes from "./CartMeals.module.css";
 import CartContext from "../../store/cart-context";
-
+import { MealSummary } from "../Meals";
 import shoppingCart from "../../assets/shoppingcart.svg";
 import CartItem from "./CartItem";
+import {
+  CardContainer,
+  CardRounded,
+  CardContainerInside,
+  ButtonGeneral,
+} from "../UI";
 
-const {
-  cartMeals,
-  cartMealsTitle,
-  cartMealsContainer,
-  totalAmountStyle,
-  buttonStyle,
-} = classes;
+import classes from "./CartMeals.module.css";
+
+const { totalAmountStyle, buttonStyle } = classes;
 
 const CartMeals = () => {
-  const { items, totalAmount, addItem, removeItem } = useContext(CartContext);
+  const { items, totalAmount, addItem, removeItem, clearCart } = useContext(CartContext);
+
+  const orderHandler = () => {
+    clearCart();
+  };
 
   const cartItemAddHandler = (item) => {
     addItem({ ...item, amount: 1 });
@@ -26,9 +31,11 @@ const CartMeals = () => {
 
   const mealsList = items.map((item) => (
     <CartItem
+      key={item.id}
       name={item.name}
       description={item.description}
       price={item.price}
+      tax={item.tax}
       amount={item.amount}
       onAdd={cartItemAddHandler.bind(null, item)}
       onRemove={cartItemRemoveHandler.bind(null, item.id)}
@@ -36,18 +43,17 @@ const CartMeals = () => {
   ));
 
   return (
-    <div className={cartMeals}>
-      <h2 className={cartMealsTitle}>
-        <img src={shoppingCart} />
-        Current Cart
-      </h2>
-      <div className={cartMealsContainer}>{mealsList}</div>
-      <div className={totalAmountStyle}>
-        <span>Total Amount (plus tax):</span>
-        <span>${totalAmount.toFixed(2)}</span>
-        <button className={buttonStyle}>Order Now</button>
-      </div>
-    </div>
+    <CardRounded>
+      <CardContainer>
+        <MealSummary title="Current Cart" icon={shoppingCart} />
+        <CardContainerInside>{mealsList}</CardContainerInside>
+        <div className={totalAmountStyle}>
+          <span>Total Amount (plus tax):</span>
+          <span>${totalAmount.toFixed(2)}</span>
+          <ButtonGeneral label="Order" button={{ className: buttonStyle, onClick: orderHandler }} />
+        </div>
+      </CardContainer>
+    </CardRounded>
   );
 };
 

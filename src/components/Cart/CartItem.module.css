@@ -31,22 +31,6 @@
   color: gray;
 }
 
-.flexContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-
 .priceStyle {
-  font-weight: 700;
-}
-
-.buttonStyle{
-  font-size: 1rem;
   font-weight: 600;
-  border: 3px solid #171717;
-  border-radius: 30px;
-  padding: 10px;
-  width: 100%;
 }

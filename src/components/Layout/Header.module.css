@@ -1,15 +1,7 @@
 .header {
-  top: 40px;
-  left: 30px;
-  right: 30px;
-  border-radius: 30px;
-  padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #171717;
-  border: 3px solid #171717;
-  background-color: white;
 }
 
 /* Title */

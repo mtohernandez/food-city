@@ -1,11 +1,17 @@
-import mealSummary from "./MealSummary.module.css";
+import classes from "./MealSummary.module.css";
 
-const { summary } = mealSummary;
+const { titleStyle } = classes;
 
-const MealSummary = () => {
-  return <section className={summary}>
-    <h2>Delicious Food, Delivered To You</h2>
-  </section>;
+const MealSummary = (props) => {
+
+  const { icon, title } = props;
+
+  return (
+    <h2 className={titleStyle}>
+      <img src={icon} />
+      {title}
+    </h2>
+  );
 };
 
 export default MealSummary;

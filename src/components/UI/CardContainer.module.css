@@ -1,7 +1,5 @@
-.app {
-  margin-top: 10px;
+.cardContainer{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
-
