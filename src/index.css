@@ -4,7 +4,7 @@
   justify-content: start;
   align-items: center;
   padding: 40px 30px;
-  max-height: 100vh;
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 768px) {
@@ -17,11 +17,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
 }
 
 body {
-  background-color: #E33A3A;
+  background-color: #e33a3a;
 }
 
 li {
