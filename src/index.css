@@ -1,8 +1,10 @@
 #root {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  padding: 40px 30px;
+  max-height: 100vh;
 }
 
 @media screen and (max-width: 768px) {
@@ -20,7 +22,6 @@
 
 body {
   background-color: #E33A3A;
-  padding: 40px 30px
 }
 
 li {
