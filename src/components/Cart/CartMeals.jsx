@@ -44,7 +44,7 @@ const CartMeals = () => {
   ));
 
   return (
-    <CardRounded>
+    <CardRounded flex={1}>
       <CardContainer>
         <MealSummary title="Current Cart" icon={shoppingCart} />
         {mealsList.length === 0 && <p className={noItemStyle}>No items yet.</p>}
